@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="@string/esp32_control"
+    app:startDestination="@id/ESP32ControlFragment">
+    <fragment
+        android:id="@+id/ESP32ControlFragment"
+        android:name="com.example.mysquaterkennung.ESP32ControlFragment"
+        android:label="fragment_esp32control"
+        tools:layout="@layout/fragment_esp32control">
+        <action
+            android:id="@+id/action_ESP32ControlFragment_to_manageDeviceFragment"
+            app:destination="@id/manageDeviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/manageDeviceFragment"
+        android:name="com.example.mysquaterkennung.ManageDeviceFragment"
+        android:label="@string/manage_device"
+        tools:layout="@layout/fragment_manage_device">
+        <action
+            android:id="@+id/action_manageDeviceFragment_to_ESP32ControlFragment"
+            app:destination="@id/ESP32ControlFragment" />
+    </fragment>
+</navigation>
